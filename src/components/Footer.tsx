@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import logoSkala from "@/assets/logo-skala.jpg";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -40,7 +41,7 @@ const Footer = () => {
               transition={{ duration: 0.5 }}
               className="inline-block"
             >
-              <span className="text-3xl font-display tracking-wider text-foreground">SKALA</span>
+              <img src={logoSkala} alt="SKALA" className="h-10 w-auto" />
             </motion.a>
             <p className="mt-4 text-sm text-muted-foreground max-w-xs">
               Transformando ideias em resultados digitais. Sua parceira para crescer online.
