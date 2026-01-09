@@ -79,6 +79,7 @@ function AnimatedBeamServicesDemo() {
   const div4Ref = useRef<HTMLDivElement>(null);
   const div5Ref = useRef<HTMLDivElement>(null);
   const div6Ref = useRef<HTMLDivElement>(null);
+  const div7Ref = useRef<HTMLDivElement>(null);
 
   return (
     <div className="relative flex h-[350px] sm:h-[400px] md:h-[500px] w-full items-center justify-center overflow-hidden rounded-xl bg-background p-4 sm:p-6 md:p-10" ref={containerRef}>
@@ -137,6 +138,9 @@ function AnimatedBeamServicesDemo() {
         </div>
         <div className="flex flex-row items-center justify-between">
           <Circle ref={div3Ref}>
+            <Icons.whatsapp />
+          </Circle>
+          <Circle ref={div7Ref}>
             <Icons.shopify />
           </Circle>
         </div>
@@ -147,6 +151,7 @@ function AnimatedBeamServicesDemo() {
       <AnimatedBeam containerRef={containerRef} fromRef={div3Ref} toRef={div4Ref} curvature={75} endYOffset={10} gradientStartColor="#22c55e" gradientStopColor="#16a34a" pathColor="gray" />
       <AnimatedBeam containerRef={containerRef} fromRef={div5Ref} toRef={div4Ref} curvature={-75} endYOffset={-10} reverse gradientStartColor="#22c55e" gradientStopColor="#16a34a" pathColor="gray" />
       <AnimatedBeam containerRef={containerRef} fromRef={div6Ref} toRef={div4Ref} reverse gradientStartColor="#22c55e" gradientStopColor="#16a34a" pathColor="gray" />
+      <AnimatedBeam containerRef={containerRef} fromRef={div7Ref} toRef={div4Ref} curvature={75} endYOffset={10} reverse gradientStartColor="#22c55e" gradientStopColor="#16a34a" pathColor="gray" />
     </div>
   );
 }
