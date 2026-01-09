@@ -86,12 +86,12 @@ const Footer = () => {
             © {currentYear} SKALA. Todos os direitos reservados.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+            <Link to="/politica-de-privacidade" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
               Política de Privacidade
-            </a>
-            <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+            </Link>
+            <Link to="/termos-de-uso" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
               Termos de Uso
-            </a>
+            </Link>
           </div>
         </div>
       </div>
