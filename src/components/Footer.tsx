@@ -6,19 +6,6 @@ import logoSkala from "@/assets/logo-skala.jpg";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
-  const footerLinks = {
-    services: [
-      { label: "Design UI/UX", href: "#serviços" },
-      { label: "Desenvolvimento Web", href: "#serviços" },
-      { label: "Marketing Digital", href: "#serviços" },
-      { label: "Automação", href: "#serviços" },
-    ],
-    company: [
-      { label: "Sobre Nós", href: "#sobre" },
-      { label: "Planos", href: "#planos" },
-      { label: "Contato", href: "#contato" },
-    ],
-  };
   
   const socialLinks = [
     { icon: Instagram, href: "https://www.instagram.com/skalanegocios", label: "Instagram" },
@@ -30,7 +17,7 @@ const Footer = () => {
     <footer className="bg-card border-t border-border">
       {/* Main Footer */}
       <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <motion.a
@@ -63,39 +50,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-4">Serviços</h4>
-            <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-4">Empresa</h4>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* Contact */}
           <div>
