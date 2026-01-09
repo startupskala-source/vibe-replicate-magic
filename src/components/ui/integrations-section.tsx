@@ -6,6 +6,10 @@ import { forwardRef, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { AnimatedBeam } from '@/components/ui/animated-beam';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import logoSkala from '@/assets/logo-skala.jpg';
+import logoMeta from '@/assets/logo-meta.png';
+import logoCapcut from '@/assets/logo-capcut.png';
+import logoShopify from '@/assets/logo-shopify.png';
 
 // Circle component for AnimatedBeam
 const Circle = forwardRef<HTMLDivElement, {
@@ -50,13 +54,20 @@ const Icons = {
       <path fill="url(#b)" d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.559 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.524h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.929z" />
     </svg>
   ),
+  meta: () => (
+    <img src={logoMeta} alt="Meta" className="w-full h-full object-contain" />
+  ),
+  capcut: () => (
+    <img src={logoCapcut} alt="CapCut" className="w-full h-full object-contain" />
+  ),
+  shopify: () => (
+    <img src={logoShopify} alt="Shopify" className="w-full h-full object-contain" />
+  ),
 };
 
-// Skala Logo placeholder
+// Skala Logo with real image
 const SkalaLogo = () => (
-  <div className="w-full h-full flex items-center justify-center font-display text-lg">
-    SK
-  </div>
+  <img src={logoSkala} alt="SKALA" className="w-full h-full object-contain" />
 );
 
 // AnimatedBeam Services Demo
@@ -118,15 +129,15 @@ function AnimatedBeamServicesDemo() {
         </div>
         <div className="flex flex-row items-center justify-between">
           <Circle ref={div2Ref}>
-            <Icons.whatsapp />
+            <Icons.meta />
           </Circle>
           <Circle ref={div6Ref}>
-            <Icons.googleDrive />
+            <Icons.capcut />
           </Circle>
         </div>
         <div className="flex flex-row items-center justify-between">
           <Circle ref={div3Ref}>
-            <Icons.notion />
+            <Icons.shopify />
           </Circle>
         </div>
       </div>
