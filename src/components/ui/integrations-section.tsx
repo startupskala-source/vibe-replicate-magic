@@ -10,6 +10,8 @@ import logoSkala from '@/assets/logo-skala.jpg';
 import logoMeta from '@/assets/logo-meta.png';
 import logoCapcut from '@/assets/logo-capcut.png';
 import logoShopify from '@/assets/logo-shopify.png';
+import logoNotion from '@/assets/logo-notion.png';
+import logoWhatsapp from '@/assets/logo-whatsapp.jpg';
 
 // Circle component for AnimatedBeam
 const Circle = forwardRef<HTMLDivElement, {
@@ -27,10 +29,7 @@ Circle.displayName = "Circle";
 // Icons for the beam animation
 const Icons = {
   notion: () => (
-    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6.017 4.313l55.333 -4.087c6.797 -0.583 8.543 -0.19 12.817 2.917l17.663 12.443c2.913 2.14 3.883 2.723 3.883 5.053v68.243c0 4.277 -1.553 6.807 -6.99 7.193L24.467 99.967c-4.08 0.193 -6.023 -0.39 -8.16 -3.113L3.3 79.94c-2.333 -3.113 -3.3 -5.443 -3.3 -8.167V11.113c0 -3.497 1.553 -6.413 6.017 -6.8z" fill="#ffffff" />
-      <path fillRule="evenodd" clipRule="evenodd" d="M61.35 0.227l-55.333 4.087C1.553 4.7 0 7.617 0 11.113v60.66c0 2.723 0.967 5.053 3.3 8.167l13.007 16.913c2.137 2.723 4.08 3.307 8.16 3.113l64.257 -3.89c5.433 -0.387 6.99 -2.917 6.99 -7.193V20.64c0 -2.21 -0.873 -2.847 -3.443 -4.733L74.167 3.143c-4.273 -3.107 -6.02 -3.5 -12.817 -2.917z" fill="#000000" />
-    </svg>
+    <img src={logoNotion} alt="Notion" className="w-full h-full object-contain" />
   ),
   googleDrive: () => (
     <svg width="100" height="100" viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg">
@@ -43,16 +42,7 @@ const Icons = {
     </svg>
   ),
   whatsapp: () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 175.216 175.552">
-      <defs>
-        <linearGradient id="b" x1="85.915" x2="86.535" y1="32.567" y2="137.092" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stopColor="#57d163" />
-          <stop offset="1" stopColor="#23b33a" />
-        </linearGradient>
-      </defs>
-      <path fill="#fff" d="m12.966 161.238 10.439-38.114a73.42 73.42 0 0 1-9.821-36.772c.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954z" />
-      <path fill="url(#b)" d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.559 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.524h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.929z" />
-    </svg>
+    <img src={logoWhatsapp} alt="WhatsApp" className="w-full h-full object-contain rounded-full" />
   ),
   meta: () => (
     <img src={logoMeta} alt="Meta" className="w-full h-full object-contain" />
