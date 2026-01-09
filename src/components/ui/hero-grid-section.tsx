@@ -41,21 +41,8 @@ function ButtonGrid({
   )
 }
 
-interface Avatar {
-  id: number;
-  src: string;
-  alt: string;
-}
-
-const AVATARS: Avatar[] = [
-  { id: 1, src: "https://i.pravatar.cc/40?img=12", alt: "Customer avatar 1" },
-  { id: 2, src: "https://i.pravatar.cc/40?img=32", alt: "Customer avatar 2" },
-  { id: 3, src: "https://i.pravatar.cc/40?img=45", alt: "Customer avatar 3" },
-  { id: 4, src: "https://i.pravatar.cc/40?img=56", alt: "Customer avatar 4" },
-];
 
 interface HeroGridSectionProps {
-  avatars?: Avatar[];
   title?: ReactNode | string;
   subtitle?: ReactNode | string;
   primaryCtaText?: string;
@@ -66,7 +53,6 @@ interface HeroGridSectionProps {
 }
 
 export function HeroGridSection({
-  avatars = AVATARS,
   title = "Build, launch, and scale your product faster",
   subtitle = "A modern platform that helps teams ship better software with less effort.",
   primaryCtaText = "Request Demo",
@@ -83,25 +69,7 @@ export function HeroGridSection({
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
       </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center py-12 sm:py-16">
-        {/* Avatars */}
-        <div className="mb-6 flex -space-x-3">
-          {avatars.map((avatar) => (
-            <div
-              key={avatar.id}
-              className="relative h-10 w-10 overflow-hidden rounded-full border-2 border-background ring-2 ring-primary/20"
-            >
-              <img
-                src={avatar.src}
-                alt={avatar.alt}
-                className="h-full w-full object-cover"
-              />
-            </div>
-          ))}
-          <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-background bg-primary text-xs font-semibold text-primary-foreground ring-2 ring-primary/20">
-            +99
-          </div>
-        </div>
+      <div className="relative z-10 flex flex-col items-center justify-center py-6 sm:py-8">
 
         {/* Title */}
         <h1 className="mb-4 max-w-4xl text-center text-4xl font-display uppercase tracking-wide sm:text-5xl md:text-6xl lg:text-7xl">
