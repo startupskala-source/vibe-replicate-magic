@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, MenuItem, HoveredLink } from "./ui/navbar-menu";
+import logoSkala from "@/assets/logo-skala.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,7 +25,7 @@ const Header = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <span className="text-2xl sm:text-3xl font-display tracking-wider text-foreground">SKALA</span>
+            <img src={logoSkala} alt="SKALA" className="h-8 sm:h-10 w-auto" />
           </motion.a>
 
           {/* Desktop Navigation */}
