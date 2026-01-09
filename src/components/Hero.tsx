@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 import { TextShimmer } from "./ui/text-shimmer";
 import { HeroGridSection } from "./ui/hero-grid-section";
+import team1 from "@/assets/team-1.jpg";
+import team2 from "@/assets/team-2.jpg";
+import team3 from "@/assets/team-3.jpg";
+import team4 from "@/assets/team-4.jpg";
 
 const Hero = () => {
   return (
@@ -30,6 +34,32 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Team Photos */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex justify-center items-center gap-3 sm:gap-4 mb-8"
+          >
+            {[team1, team2, team3, team4].map((img, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className="relative"
+              >
+                <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-primary/30 shadow-lg">
+                  <img
+                    src={img}
+                    alt={`Team member ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
           {/* Hero Grid Section */}
           <HeroGridSection
             title={
