@@ -39,7 +39,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex justify-center items-center mb-8"
+            className="flex justify-center items-center mb-4"
           >
             {[team1, team2, team3, team4].map((img, index) => (
               <motion.div
@@ -48,9 +48,9 @@ const Hero = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 className="relative"
-                style={{ marginLeft: index === 0 ? 0 : -12, zIndex: 4 - index }}
+                style={{ marginLeft: index === 0 ? 0 : -10, zIndex: 4 - index }}
               >
-                <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 border-background shadow-lg ring-2 ring-primary/20">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full overflow-hidden border-2 border-background shadow-md ring-1 ring-primary/20">
                   <img
                     src={img}
                     alt={`Team member ${index + 1}`}
