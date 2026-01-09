@@ -165,44 +165,7 @@ export default function IntegrationsSection() {
             </p>
           </div>
 
-          <Tabs defaultValue="services" className="w-full">
-            <TabsList className="mx-auto grid w-full max-w-md grid-cols-2 mb-8">
-              <TabsTrigger value="services">Nossos Serviços</TabsTrigger>
-              <TabsTrigger value="integrations">Integrações</TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="services" className="mt-0">
-              <AnimatedBeamServicesDemo />
-            </TabsContent>
-
-            <TabsContent value="integrations" className="mt-0">
-              <div className="mx-auto grid w-full max-w-3xl gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                <IntegrationCard title="GitHub" description="Hospedagem de código e controle de versão">
-                  <GitHubLogo />
-                </IntegrationCard>
-
-                <IntegrationCard title="Slack" description="Plataforma de comunicação">
-                  <SlackLogo />
-                </IntegrationCard>
-
-                <IntegrationCard title="Notion" description="Espaço de trabalho completo">
-                  <NotionLogo />
-                </IntegrationCard>
-
-                <IntegrationCard title="Figma" description="Ferramenta de design colaborativo">
-                  <FigmaLogo />
-                </IntegrationCard>
-
-                <IntegrationCard title="Discord" description="Comunicação em comunidades">
-                  <DiscordLogo />
-                </IntegrationCard>
-
-                <IntegrationCard title="VS Code" description="Editor de código preferido">
-                  <VSCodeLogo />
-                </IntegrationCard>
-              </div>
-            </TabsContent>
-          </Tabs>
+          <AnimatedBeamServicesDemo />
         </div>
       </div>
     </section>
