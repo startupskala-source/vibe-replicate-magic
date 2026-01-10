@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 
+const WHATSAPP_LINK = "https://wa.me/+5547984682257?text=Tenho%20interesse%20em%20escalar%20a%20minha%20empresa%20com%20tr%C3%A1fego%20pago%2C%20web%20site%20e%20automa%C3%A7%C3%A3o";
+
 const CTA = () => {
   return (
     <section id="contato" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden">
@@ -26,10 +28,12 @@ const CTA = () => {
           </p>
 
           <div className="flex justify-center px-4">
-            <Button size="lg" className="group bg-primary text-primary-foreground hover:bg-primary/90">
-              Agendar Consultoria Grátis
-              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="group bg-primary text-primary-foreground hover:bg-primary/90">
+                Agendar Consultoria Grátis
+                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </a>
           </div>
         </motion.div>
       </div>

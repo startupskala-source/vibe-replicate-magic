@@ -42,6 +42,8 @@ function ButtonGrid({
 }
 
 
+const WHATSAPP_LINK = "https://wa.me/+5547984682257?text=Tenho%20interesse%20em%20escalar%20a%20minha%20empresa%20com%20tr%C3%A1fego%20pago%2C%20web%20site%20e%20automa%C3%A7%C3%A3o";
+
 interface HeroGridSectionProps {
   title?: ReactNode | string;
   subtitle?: ReactNode | string;
@@ -83,22 +85,23 @@ export function HeroGridSection({
 
         {/* CTAs */}
         <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
-          <MovingBorderButton
-            borderRadius="0.5rem"
-            containerClassName="h-12 w-auto"
-            className="px-6 font-bold text-white bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 border-0 relative overflow-hidden"
-            duration={3000}
-            onClick={onPrimaryCtaClick}
-          >
-            <ButtonGrid
-              cellSize={14}
-              strokeWidth={0.6}
-              patternOffset={[0, 2]}
-              className="text-white/30 absolute inset-0"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-600/50 via-transparent to-orange-600/50 pointer-events-none" />
-            <span className="relative z-10">{primaryCtaText}</span>
-          </MovingBorderButton>
+          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+            <MovingBorderButton
+              borderRadius="0.5rem"
+              containerClassName="h-12 w-auto"
+              className="px-6 font-bold text-white bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 border-0 relative overflow-hidden"
+              duration={3000}
+            >
+              <ButtonGrid
+                cellSize={14}
+                strokeWidth={0.6}
+                patternOffset={[0, 2]}
+                className="text-white/30 absolute inset-0"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-600/50 via-transparent to-orange-600/50 pointer-events-none" />
+              <span className="relative z-10">{primaryCtaText}</span>
+            </MovingBorderButton>
+          </a>
         </div>
       </div>
     </section>
