@@ -155,7 +155,7 @@ const Testimonials = () => {
         duration: 0.6,
         ease: [0.25, 0.1, 0.25, 1]
       }} className="text-center mb-12 lg:mb-16">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-4">F
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-4">
             Feedbacks
           </span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-white tracking-wide mb-4">
