@@ -61,28 +61,6 @@ export function HeroGridSection({
   onSecondaryCtaClick,
   className,
 }: HeroGridSectionProps) {
-  const handlePrimaryClick = () => {
-    if (onPrimaryCtaClick) {
-      onPrimaryCtaClick();
-    } else {
-      window.open(
-        "https://wa.me/5547984682257?text=Olá! Gostaria de saber mais sobre os serviços da SKALA.",
-        "_blank"
-      );
-    }
-  };
-
-  const handleSecondaryClick = () => {
-    if (onSecondaryCtaClick) {
-      onSecondaryCtaClick();
-    } else {
-      const servicesSection = document.querySelector("#servicos");
-      if (servicesSection) {
-        servicesSection.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  };
-
   return (
     <section className={cn("relative w-full", className)}>
       {/* Grid background pattern */}
@@ -110,7 +88,7 @@ export function HeroGridSection({
             containerClassName="h-12 w-auto"
             className="px-6 font-bold text-white bg-gradient-to-r from-orange-600 via-amber-500 to-orange-500 border-0 relative overflow-hidden"
             duration={3000}
-            onClick={handlePrimaryClick}
+            onClick={onPrimaryCtaClick}
           >
             <ButtonGrid
               cellSize={14}
@@ -121,15 +99,6 @@ export function HeroGridSection({
             <div className="absolute inset-0 bg-gradient-to-r from-orange-600/50 via-transparent to-orange-600/50 pointer-events-none" />
             <span className="relative z-10">{primaryCtaText}</span>
           </MovingBorderButton>
-
-          <Button
-            variant="outline"
-            size="lg"
-            className="h-12 px-6"
-            onClick={handleSecondaryClick}
-          >
-            {secondaryCtaText}
-          </Button>
         </div>
       </div>
     </section>
