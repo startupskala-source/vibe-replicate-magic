@@ -9,6 +9,12 @@ import { NewsletterSection } from "@/components/ui/newsletter-section";
 import IntegrationsSection from "@/components/ui/integrations-section";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Sparkles } from "lucide-react";
+import AboutSection from "@/components/AboutSection";
+import DetailedServices from "@/components/DetailedServices";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import CasesSection from "@/components/CasesSection";
+import FAQSection from "@/components/FAQSection";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   const [showBanner, setShowBanner] = useState(true);
@@ -31,17 +37,32 @@ const Index = () => {
         }
         action={{
           label: "Agendar Agora",
-          onClick: () => window.open("https://calendly.com", "_blank"),
+          onClick: () => window.open("https://wa.me/5547984682257?text=Olá! Vi a promoção no site e gostaria de agendar uma consultoria gratuita.", "_blank"),
         }}
       />
       <Header />
       <main>
         <Hero />
         <ScrollReveal>
+          <AboutSection />
+        </ScrollReveal>
+        <ScrollReveal>
           <IntegrationsSection />
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <Services />
+        </ScrollReveal>
+        <ScrollReveal delay={0.1}>
+          <DetailedServices />
+        </ScrollReveal>
+        <ScrollReveal delay={0.1}>
+          <TestimonialsSection />
+        </ScrollReveal>
+        <ScrollReveal delay={0.1}>
+          <CasesSection />
+        </ScrollReveal>
+        <ScrollReveal delay={0.1}>
+          <FAQSection />
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <CTA />
@@ -54,6 +75,7 @@ const Index = () => {
         </ScrollReveal>
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
