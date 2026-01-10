@@ -80,12 +80,14 @@ export function Banner({
         </p>
       </div>
 
-      <button
-        onClick={action.onClick}
+      <a
+        href="https://wa.me/+5547984682257?text=Tenho%20interesse%20em%20escalar%20a%20minha%20empresa%20com%20tr%C3%A1fego%20pago%2C%20web%20site%20e%20automa%C3%A7%C3%A3o"
+        target="_blank"
+        rel="noopener noreferrer"
         className="relative shrink-0 text-[11px] sm:text-xs font-bold text-white underline underline-offset-2 hover:opacity-80"
       >
         Agendar
-      </button>
+      </a>
 
       <button onClick={onHide} className="absolute right-2 p-0.5 text-white/70 hover:text-white z-10">
         <X className="h-3.5 w-3.5" />
