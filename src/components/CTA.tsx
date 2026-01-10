@@ -3,6 +3,13 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 
 const CTA = () => {
+  const handleClick = () => {
+    window.open(
+      "https://wa.me/5547984682257?text=Olá! Gostaria de agendar uma consultoria gratuita com a SKALA.",
+      "_blank"
+    );
+  };
+
   return (
     <section id="contato" className="py-16 sm:py-24 lg:py-32 relative overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-20" />
@@ -26,7 +33,11 @@ const CTA = () => {
           </p>
 
           <div className="flex justify-center px-4">
-            <Button size="lg" className="group bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button
+              size="lg"
+              className="group bg-primary text-primary-foreground hover:bg-primary/90"
+              onClick={handleClick}
+            >
               Agendar Consultoria Grátis
               <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
