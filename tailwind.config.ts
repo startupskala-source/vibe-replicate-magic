@@ -109,12 +109,23 @@ export default {
             backgroundPosition: "var(--bg-size) 0",
           },
         },
+        "liquid-flow": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
+        "liquid-wave": {
+          "0%, 100%": { transform: "translateX(-100%) scaleY(1)" },
+          "50%": { transform: "translateX(0%) scaleY(1.1)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
         gradient: "gradient 8s linear infinite",
+        "liquid-flow": "liquid-flow 3s ease-in-out infinite",
+        "liquid-wave": "liquid-wave 2s ease-in-out infinite",
       },
     },
   },

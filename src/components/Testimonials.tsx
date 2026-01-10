@@ -110,7 +110,18 @@ const TestimonialCard = ({
             <span className="text-xs text-muted-foreground">{testimonial.metric.label}</span>
             <span className="text-sm font-bold text-gradient">+{testimonial.metric.value}%</span>
           </div>
-          <Progress value={Math.min(testimonial.metric.value / 10, 100)} className="h-2 bg-orange-100" />
+          <div className="relative h-2 w-full overflow-hidden rounded-full bg-green-100">
+            <div 
+              className="h-full rounded-full animate-liquid-flow"
+              style={{ 
+                width: `${Math.min(testimonial.metric.value / 10, 100)}%`,
+                background: 'linear-gradient(90deg, #22c55e, #4ade80, #86efac, #4ade80, #22c55e)',
+                backgroundSize: '200% 100%',
+              }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-liquid-wave" />
+            </div>
+          </div>
         </div>
 
         {/* Author */}
