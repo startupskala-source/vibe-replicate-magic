@@ -2,6 +2,9 @@ import { useRef, useId } from "react";
 import { motion, useInView } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
+import client1 from "@/assets/client-1.jpg";
+import client2 from "@/assets/client-2.jpg";
+import client3 from "@/assets/client-3.jpg";
 
 function Grid({
   cellSize = 14,
@@ -48,14 +51,16 @@ const testimonials = [
     content: "A Skala transformou completamente nossa presença digital. Nosso faturamento aumentou 340% em apenas 6 meses com as estratégias implementadas.",
     rating: 5,
     metric: { label: "Aumento no faturamento", value: 340 },
+    image: client1,
   },
   {
     id: 2,
-    name: "Mariana Santos",
-    role: "Diretora de Marketing, ModaPlus",
+    name: "Rafael Santos",
+    role: "Diretor de Marketing, ModaPlus",
     content: "Profissionais excepcionais! A automação de WhatsApp nos ajudou a atender 5x mais clientes sem aumentar a equipe.",
     rating: 5,
     metric: { label: "Aumento em atendimentos", value: 500 },
+    image: client2,
   },
   {
     id: 3,
@@ -64,6 +69,7 @@ const testimonials = [
     content: "O ROI das campanhas de tráfego pago foi impressionante. Cada real investido retornou 8x em vendas.",
     rating: 5,
     metric: { label: "Retorno sobre investimento", value: 800 },
+    image: client3,
   },
 ];
 
@@ -114,9 +120,11 @@ const TestimonialCard = ({
 
         {/* Author */}
         <div className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-full bg-gradient-to-br from-orange-500 to-amber-500 flex items-center justify-center text-white font-bold text-sm">
-            {testimonial.name.charAt(0)}
-          </div>
+          <img 
+            src={testimonial.image} 
+            alt={testimonial.name}
+            className="h-12 w-12 rounded-full object-cover border-2 border-orange-200 shadow-md"
+          />
           <div>
             <p className="font-semibold text-sm text-foreground">{testimonial.name}</p>
             <p className="text-xs text-muted-foreground">{testimonial.role}</p>
