@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import Testimonials from "@/components/Testimonials";
 import { Banner } from "@/components/ui/banner";
 import { NewsletterSection } from "@/components/ui/newsletter-section";
 import IntegrationsSection from "@/components/ui/integrations-section";
@@ -42,6 +43,9 @@ const Index = () => {
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <Services />
+        </ScrollReveal>
+        <ScrollReveal delay={0.1}>
+          <Testimonials />
         </ScrollReveal>
         <ScrollReveal delay={0.1}>
           <CTA />
