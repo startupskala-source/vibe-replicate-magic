@@ -14,7 +14,47 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          id: string
+          updated_at: string | null
+          full_name: string | null
+          avatar_url: string | null
+          website: string | null
+          phone: string | null
+          company: string | null
+          bio: string | null
+        }
+        Insert: {
+          id: string
+          updated_at?: string | null
+          full_name?: string | null
+          avatar_url?: string | null
+          website?: string | null
+          phone?: string | null
+          company?: string | null
+          bio?: string | null
+        }
+        Update: {
+          id?: string
+          updated_at?: string | null
+          full_name?: string | null
+          avatar_url?: string | null
+          website?: string | null
+          phone?: string | null
+          company?: string | null
+          bio?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "profiles_id_fkey"
+            columns: ["id"]
+            isOneToOne: true
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
     }
     Views: {
       [_ in never]: never
